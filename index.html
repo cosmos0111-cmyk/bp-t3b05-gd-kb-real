@@ -1,214 +1,649 @@
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>애니 매니아 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="bpaas-design-system" content="brutalist-avantgarde">
+  <meta name="bpaas-design-theme" content="kr-neon-void">
+  <meta name="description" content="공덕 노래방 내돈내산 리뷰와 실시간 예약. 92% 고객 만족, 프리미엄 음향 시설, 방음 완벽. 지금 전화 문의 010-6279-0862">
+  <meta name="keywords" content="공덕 노래방, 공덕 노래방 내돈내산, 공덕 가성비 노래방, 공덕 코인노래방, 공덕 노래방 추천, 마포 노래방, 공덕역 노래방">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://t3b05-gd-kb-real.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="공덕 노래방 내돈내산 | 프리미엄 음향 & 방음">
+  <meta property="og:description" content="공덕 노래방 내돈내산 리뷰와 실시간 예약. 92% 고객 만족, 프리미엄 음향 시설, 방음 완벽. 지금 전화 문의">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://t3b05-gd-kb-real.vercel.app/">
+  <meta property="og:image" content="https://t3b05-gd-kb-real.vercel.app/og-image.jpg"> <!-- 이미지 대신 CSS/SVG로 대체 -->
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="공덕 노래방 내돈내산 | 프리미엄 음향 & 방음">
+  <meta name="twitter:description" content="공덕 노래방 내돈내산 리뷰와 실시간 예약. 92% 고객 만족, 프리미엄 음향 시설, 방음 완벽.">
+  <meta name="twitter:image" content="https://t3b05-gd-kb-real.vercel.app/og-image.jpg">
+
+  <title>공덕 노래방 내돈내산 | 프리미엄 음향 & 방음</title>
+
+  <!-- JSON-LD Schema (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "공덕 노래방",
+    "description": "공덕역 인근 프리미엄 노래방. 완벽한 방음과 최상의 음향 시스템, 내돈내산 리뷰로 검증된 시설.",
+    "telephone": "010-6279-0862",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "서울",
+      "addressRegion": "마포구",
+      "addressCountry": "KR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "217"
+    },
+    "priceRange": "₩₩",
+    "openingHours": "Mo-Su 10:00-06:00",
+    "image": "https://t3b05-gd-kb-real.vercel.app/og-image.jpg"
+  }
+  </script>
+
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    /* RESET & BASE */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
+      font-family: "Impact", "Arial Black", system-ui, -apple-system, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
+
+    /* TYPOGRAPHY - oversize, raw */
+    h1, h2, h3, h4 {
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
+      letter-spacing: -0.02em;
     }
     h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
+      font-size: clamp(3.2rem, 12vw, 6rem);
+      line-height: 0.9;
+      margin-bottom: 0.3em;
     }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
+    h2 {
+      font-size: clamp(2.4rem, 8vw, 4rem);
+      line-height: 1;
+      margin-bottom: 0.4em;
+    }
+    h3 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      line-height: 1.1;
+    }
+    p, li {
+      font-family: system-ui, -apple-system, sans-serif;
       font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #ccc;
     }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
+    a {
+      color: #ff3b00;
       text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
       font-weight: 700;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* LAYOUT - full bleed, asymmetric */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 72px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 36px;
+      }
+    }
+
+    /* GAPS & SPACING */
+    .gap-48 { gap: 48px; }
+    .gap-72 { gap: 72px; }
+    .section-gap {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+    @media (max-width: 768px) {
+      .section-gap {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+    }
+
+    /* BRUTALIST BORDERS & SKEW */
+    .brutal-border {
+      border: 4px solid #fff;
+      border-left: 6px solid #ff3b00;
+    }
+    .skew-bg {
+      transform: skew(-3deg);
+      background: #111;
+      border: 4px solid #ff3b00;
+      padding: 48px 72px;
+    }
+    .skew-bg > * {
+      transform: skew(3deg);
+    }
+    @media (max-width: 768px) {
+      .skew-bg {
+        padding: 24px 36px;
+        transform: none;
+      }
+      .skew-bg > * {
+        transform: none;
+      }
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 18px 48px;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
+      background: #ff3b00;
+      color: #000;
+      border: 4px solid #fff;
+      cursor: pointer;
+      transition: 0.15s;
+      letter-spacing: 0.05em;
     }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .btn:hover {
+      background: #fff;
+      color: #000;
+      border-color: #ff3b00;
+      transform: scale(1.02);
     }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
+    .btn-outline {
+      background: transparent;
+      color: #ff3b00;
+      border: 4px solid #ff3b00;
     }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
+    .btn-outline:hover {
+      background: #ff3b00;
+      color: #000;
     }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(0,0,0,0.92);
+      border-bottom: 4px solid #ff3b00;
+      padding: 18px 0;
+      backdrop-filter: blur(4px);
     }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
+    .header-inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+    .logo span {
+      color: #ff3b00;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    nav a {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    nav a:hover {
+      border-bottom-color: #ff3b00;
+      color: #ff3b00;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      border: 2px solid #fff;
+      padding: 10px 12px;
+      cursor: pointer;
+      background: #000;
+    }
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      transition: 0.3s;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        flex-direction: column;
+        gap: 24px;
+        padding: 48px 36px;
+        border-bottom: 4px solid #ff3b00;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+      }
+      nav.open {
+        transform: translateX(0);
+      }
+      nav a {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 96px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 6px solid #ff3b00;
+      background: 
+        repeating-linear-gradient(45deg, rgba(255,59,0,0.08) 0px, rgba(255,59,0,0.08) 8px, transparent 8px, transparent 16px),
+        radial-gradient(circle at 20% 50%, #1a0000 0%, #000 80%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 72px 0;
+      transform: rotate(-1.5deg) skewX(-2deg);
+    }
+    .hero-content > * {
+      transform: rotate(1.5deg) skewX(2deg);
+    }
+    .hero h1 {
+      font-size: clamp(4rem, 14vw, 7rem);
+      text-shadow: 6px 6px 0 #ff3b00;
+      margin-bottom: 24px;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 720px;
+      color: #eee;
+      margin-bottom: 36px;
+      border-left: 6px solid #ff3b00;
+      padding-left: 24px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-dec {
+      position: absolute;
+      right: -5%;
+      top: 10%;
+      width: 40%;
+      height: 80%;
+      border: 6px solid #ff3b00;
+      transform: rotate(12deg) skewX(-8deg);
+      background: linear-gradient(135deg, rgba(255,59,0,0.2), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        margin-top: 80px;
+        min-height: 60vh;
+      }
+      .hero-content {
+        transform: none;
+      }
+      .hero-content > * {
+        transform: none;
+      }
+      .hero h1 {
+        text-shadow: 4px 4px 0 #ff3b00;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .hero-dec {
+        display: none;
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      position: relative;
+    }
+    .section-title {
+      display: inline-block;
+      border-bottom: 6px solid #ff3b00;
+      padding-bottom: 8px;
+      margin-bottom: 48px;
+    }
+    .asymmetric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .asymmetric-grid.reverse {
+      grid-template-columns: 1.2fr 1fr;
+    }
+    @media (max-width: 768px) {
+      .asymmetric-grid,
+      .asymmetric-grid.reverse {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* UGC REVIEW CARDS */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 48px;
+    }
+    .review-card {
+      background: #0e0e0e;
+      border: 4px solid #fff;
+      padding: 36px;
+      transform: rotate(0.5deg);
+      transition: 0.2s;
+      position: relative;
+    }
+    .review-card:nth-child(odd) {
+      transform: rotate(-0.5deg);
+    }
+    .review-card:hover {
+      transform: rotate(0deg) scale(1.02);
+      border-color: #ff3b00;
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
+    }
+    .review-author {
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .review-date {
+      font-family: system-ui;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .review-stars {
+      color: #ff3b00;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+    .review-text {
+      font-family: system-ui;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .review-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: #ff3b00;
+      color: #000;
+      font-weight: 900;
+      padding: 6px 18px;
       font-size: 0.8rem;
-      color: var(--muted-color);
+      text-transform: uppercase;
+      border: 2px solid #fff;
     }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
+
+    /* FEATURES */
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      border: 4px solid #fff;
+      padding: 48px;
+      background: #0a0a0a;
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>애니 매니아 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>애니 매니아</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h3>
-          <p>90년대 셀 애니메이션 제작 시 빛이 뿌옇게 흐려지거나 번지는 몽환적인 효과를 내기 위해 투명 셀판 아래에 부드러운 백라이트를 대고 조리개를 조절해 이중 노출로 촬영하던 촬영 스튜...</p>
-        </a>
-      
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .feature-icon {
+      font-size: 2.4rem;
+      line-height: 1;
+      min-width: 60px;
+    }
+    .feature-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+    .feature-item p {
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      .feature-list {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+    }
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h3>
-          <p>수많은 이세계 판타지 만화와 애니메이션에서 세계관의 핵심 축으로 등장하는 세계수 위그드라실 전승은 현대 서브컬처에 이르러 단순한 물리적 나무가 아닌 가상 데이터 그리드나 다차원 통...</p>
-        </a>
-      
+    /* FOOTER */
+    footer {
+      background: #050505;
+      border-top: 6px solid #ff3b00;
+      padding: 72px 0 36px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 72px;
+    }
+    .footer-brand {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .footer-brand span {
+      color: #ff3b00;
+    }
+    .footer-contact {
+      font-family: system-ui;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .footer-contact a {
+      color: #ff3b00;
+    }
+    .footer-links a {
+      display: block;
+      color: #999;
+      margin-bottom: 12px;
+      font-family: system-ui;
+    }
+    .footer-links a:hover {
+      color: #ff3b00;
+    }
+    .copyright {
+      margin-top: 72px;
+      padding-top: 36px;
+      border-top: 2px solid #222;
+      text-align: center;
+      font-family: system-ui;
+      font-size: 0.9rem;
+      color: #666;
+    }
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h3>
-          <p>디즈니의 풀 애니메이션(초당 24장)에 대비되는 동양 리미티드 애니메이션의 정수인 3코마 작화법(초당 8장 기법)은 프레임의 부족함을 독창적인 프레임 홀드 타이밍과 과장된 정지 컷...</p>
-        </a>
-      
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 마포 셔츠룸 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 마포 셔츠룸 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
+
+
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
       
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">공덕 노래방 내돈내산 경험자에게 물어본 현실적인 판단 기준</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목"데이터 마이너의 미스터리: 엘든링 데이터로 밝혀진 미사용 보스 패턴" ## 포스트 아, 진짜... 엘든링 데이터마이닝에서는 미사용 보스 3종의 실제 패턴과 컷된 이유가 담긴 깊은 맥락을 발견했다. 이는 게임 파일에서 가장 깊숙한 곳 까지까지 </p>
       </div>
-    </footer>
+      <a href="posts/interview-001-1hfpx85.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">애니 작화 마니아들이 강력히 추천하는 마포 셔츠룸 스페셜 아카이브</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">애니 작화 마니아들이 강력히 추천하는 마포 셔츠룸 스페셜 아카이브</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-05">2026-06-05</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">테포마 비너스 2인? 야, 그 찐빠를 모르면 공덕 노래방 내돈내산도 아깝지 않냐?</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아니, 솔직히 말해서 아직도 테라포밍 마스 '비너스 넥스트' 확장을 2인플로 돌리면서 "밸런스 좋네~" 이러고 있으면 내가 좀 답답해. 진짜 속 뒤집어진다니까? 😬 그 정도면 그냥 공덕 노래방 가서 쌩목으로 열창하고 오는 게 돈 덜 아까울 지경이야. 내돈내산 후기? </p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-05">2026-06-05</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">공덕 노래방 내돈내산, 30대형님 추천 리뷰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 키워드 소개공덕 노래방 내돈내산, 이 키워드는 보드게임에 관심이 많은 사람들에게는 낯선 단어일 수 있다. 하지만, 오늘은 이 키워드와 관련된 이야기를 풀어보려 한다. 보드게임을 즐기는 사람으로서, 나는最近에 글룸헤이븐 1판과 2판의 클래스 카드 스탯 차이를 조사해</p>
+      </div>
+      <a href="posts/review-002.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">공덕 노래방 내돈내산 관련 추천 정보 — 놓치면 후회할 꿀팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 키워드 컨텍스트 이 글의 배경 비즈니스 키워드는 "공덕 노래방 내돈내산"입니다. 에드워드 스노 Snowden의 공개한 NSA 프리즘 프로그램 슬라이드 중 언론이 다루지 않은 슬라이드 번호 7장의 내용에 대해 깊이 있는 분석을 진행하겠습니다. 특히, 실제 기밀해제와</p>
+      </div>
+      <a href="posts/t3link-002-1hfpx85.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
